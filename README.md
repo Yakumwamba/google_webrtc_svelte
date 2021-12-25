@@ -21,8 +21,12 @@ Before creating a production version of your app, install an [adapter](https://k
 If you want to test on your mobile browser make sure to start the development server with this command `npm run dev --host --https` this allows the application to run in a secureContext which is required for us to access the `navigator` object.
 
 
+<span style="color:red">Warning: It is highly recommended to use headphones when testing these samples, as it will otherwise risk loud audio feedback on your system.</span>.
+
 Todo List
 =========
+
+The first part of this todo list todo list is to implement the getUserMedia() inside a svelete app which allows us to access the media devices on the client side (browser)
 
 1. Basic getUserMedia demo
 2. Use getUserMedia with canvas
