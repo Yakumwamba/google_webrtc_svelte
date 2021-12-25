@@ -19,10 +19,3 @@ Before creating a production version of your app, install an [adapter](https://k
 
 ## Testing on a Chrome Mobile browser
 If you want to test on your mobile browser make sure to start the development server with this command `npm run dev --host --https` this allows the application to run in a secureContext which is required for us to access the `navigator` object.
-
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
