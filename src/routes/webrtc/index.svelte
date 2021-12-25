@@ -1,21 +1,34 @@
-<script>
+<script  >
+import { browser } from "$app/env";
+
     import { onMount } from "svelte";
 
     let video;
-
-    onMount(() => {
+let canvas;
+    onMount(async () => {
         video = document.getElementById("video");
+        canvas = window.canvas = document.getElementById("canvas");
+        console.log(canvas);
         //video.play();
         const constraints = (window.constraints = {
             audio: false,
-            video: {
-                width: { min: 1280, ideal: 1920, max: 2560 },
-                height: { min: 720, ideal: 1080, max: 1440 },
-            },
+            video:true
         });
-
-        console.log(constraints);
-        init();
+    
+        
+        try {
+            if(browser) {
+                const stream = await navigator.mediaDevices.getUserMedia(
+                    constraints
+                );
+                console.log("this a stream = > ", stream);
+                handleSuccess(stream);
+            }
+           
+        } catch (error) {
+            handleError(error);
+        }
+       // init();
     });
 
     //==========================================================
@@ -42,7 +55,7 @@
                     "order for the demo to work."
             );
         }
-        errorMsg(`getUserMedia error: ${error.name}`, error);
+        errorMsg(`getUserMedia error: ${error.message}`, error);
     }
 
     function errorMsg(msg, error) {
@@ -70,4 +83,11 @@
 
     <video id="video" playsinline autoplay bind:this={video} />
     <div id="errorMsg"></div>
+    <canvas 
+    bind:this={canvas}
+    width={32}
+    height={32}
+    >
+
+    </canvas>
 </div>
