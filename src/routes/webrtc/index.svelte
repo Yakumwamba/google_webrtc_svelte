@@ -16,6 +16,11 @@ let canvas;
         });
     
         
+        if(window.isSecureContext) {
+            console.log("Secure");
+        } else {
+            console.log("Not Secure");
+        }
         try {
             if(browser) {
                 const stream = await navigator.mediaDevices.getUserMedia(
