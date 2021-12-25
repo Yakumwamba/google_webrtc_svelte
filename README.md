@@ -20,7 +20,7 @@ Before creating a production version of your app, install an [adapter](https://k
 ## Testing on a Chrome Mobile browser
 If you want to test on your mobile browser make sure to start the development server with this command `npm run dev --host --https` this allows the application to run in a secureContext which is required for us to access the `navigator` object.
 
-⚠️WARNING⚠️ It is highly recommended to use headphones when testing these samples, as it will otherwise risk loud audio feedback on your system.
+⚠️WARNING⚠️ *It is highly recommended to use headphones when testing these samples, as it will otherwise risk loud audio feedback on your system.
 
 Todo List
 =========
