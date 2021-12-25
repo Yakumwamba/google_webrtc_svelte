@@ -19,3 +19,17 @@ Before creating a production version of your app, install an [adapter](https://k
 
 ## Testing on a Chrome Mobile browser
 If you want to test on your mobile browser make sure to start the development server with this command `npm run dev --host --https` this allows the application to run in a secureContext which is required for us to access the `navigator` object.
+
+
+Todo List
+=========
+
+1. Basic getUserMedia demo
+2. Use getUserMedia with canvas
+3. Use getUserMedia with canvas and CSS filters
+4. Choose camera resolution
+5. Audio-only getUserMedia() output to local audio element
+6. Audio-only getUserMedia() displaying volume
+7. Record stream
+8. Screensharing with getDisplayMedia
+9. Control camera pan, tilt, and zoom
