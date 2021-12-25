@@ -1,8 +1,13 @@
 
 ![complete](https://user-images.githubusercontent.com/72974932/147395289-51e06ab4-b157-439d-98f9-90d4698fe35f.png)
 
+## About this project 
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+ I created this project to learn how to use the Svelte library and to learn how to use the Svelte CLI. 
+ This acts as a guide to how to use the Svelte CLI and webrtc in Svelte. It includes all the examples from https://webrtc.github.io/samples/ that demonstrate how the WebRTC API functions work.
+ 
+ 
+Once you've cloned this repo and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
