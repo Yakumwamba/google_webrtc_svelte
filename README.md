@@ -15,6 +15,12 @@ npm run dev -- --open
 
 Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
+
+
+## Testing on a Chrome Mobile browser
+If you want to test on your mobile browser make sure to start the development server with this command `npm run dev --host --https` this allows the application to run in a secureContext which is required for us to access the `navigator` object.
+
+
 ```bash
 npm run build
 ```
