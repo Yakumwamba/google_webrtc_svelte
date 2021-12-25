@@ -1,6 +1,5 @@
 
-![banner (1)](https://user-images.githubusercontent.com/72974932/147395198-174a362e-9712-4a04-9fbd-70b96547dd51.png)
-
+![complete](https://user-images.githubusercontent.com/72974932/147395289-51e06ab4-b157-439d-98f9-90d4698fe35f.png)
 
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
