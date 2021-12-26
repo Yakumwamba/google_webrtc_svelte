@@ -10,5 +10,5 @@
 </main>
 
 <footer class="flex justify-center">
-	<p>visit <a class=" btn-link" href="https://github.com/yakumwamba/google_webrtc">Yakumwamba git repo</a> to learn webrtc</p>
+	<p>visit <a class=" btn-link" href="https://github.com/yakumwamba/google_webrtc_svelte">Yakumwamba git repo</a> to learn webrtc</p>
 </footer>
