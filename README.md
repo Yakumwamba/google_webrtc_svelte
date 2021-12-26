@@ -53,5 +53,6 @@ However, if you are using this project and are happy with it or just want to enc
 2. Starring and sharing the project 🚀
 
 Contributions are welcome! <3 
-Thanks ❤️
-Made with ❤️ and JavaScript.
+Thanks 🦃
+
+Made with ❤️ and Svelte.
