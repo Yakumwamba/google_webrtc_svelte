@@ -52,4 +52,6 @@ However, if you are using this project and are happy with it or just want to enc
 1. Giving credit when you use it in your project.
 2. Starring and sharing the project 🚀
 
-Thanks! ❤️
+Contributions are welcome! <3 
+Thanks ❤️
+Made with ❤️ and JavaScript.
