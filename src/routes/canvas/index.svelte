@@ -1,4 +1,9 @@
 <script>
+
+// I created this project to learn how to use the Svelte library and to learn how to use the Svelte CLI.
+// This is a guide to how to use the Svelte CLI and webrtc in Svelte.
+
+
     import { onMount } from "svelte";
 
     let canvas;

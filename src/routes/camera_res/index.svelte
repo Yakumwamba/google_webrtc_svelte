@@ -14,6 +14,7 @@
     let dimemsions;
     let currentWidth = 0;
     let currentHeight = 0;
+    let errorMessageBox;
     //buttons and input
 
     let VGA;
@@ -50,20 +51,20 @@
 
     const vgaConstraints = {
         video: {
-            width: { exact: 640 },
-            height: { exact: 480 },
+            width: { exact: 320 },
+            height: { exact: 240 },
         },
     };
     const HDConstraints = {
         video: {
-            width: { exact: 640 },
-            height: { exact: 480 },
+            width: { exact: 320 },
+            height: { exact: 240 },
         },
     };
     const fullHDConstraints = {
         video: {
-            width: { exact: 640 },
-            height: { exact: 480 },
+            width: { exact: 320 },
+            height: { exact: 240 },
         },
     };
 
@@ -97,13 +98,14 @@
 
     const errorMessage = (who, what) => {
         const message = `${who} :  ${what}`;
-        errormessage.innerText = message;
-        errormessage.style.display = "block";
-        video.style.display = "none";
+        // errorMessageBox.innerText = message;
+        // errorMessageBox.style.display = "block";
+        // video.style.display = "none";
+        console.log(message);
     };
 
     const clearMessage = () => {
-        errormessage.style.display = "none";
+        errorMessageBox.style.display = "none";
     };
 
     const displayVideoDimensions = (whereSeen) => {
@@ -178,12 +180,14 @@
 
     const vgaButton = () => {
         console.log("VGA button clicked");
+        getMedia(vgaConstraints);
     };
     const HDButton = () => {
-      getMedia(HDConstraints);
+        getMedia(HDConstraints);
     };
     const fullHDButton = () => {
         console.log("Full HD button clicked");
+        getMedia(fullHDConstraints);
     };
 </script>
 
@@ -218,5 +222,5 @@
     <input bind:this={sizeLock} type="checkbox" />Lock video size<br />
     <input bind:this={aspectLock} type="checkbox" />Lock aspect ratio<br />
 </div>
-<p bind:this={errorMessage} />
+<p bind:this={errorMessageBox} />
 xc
