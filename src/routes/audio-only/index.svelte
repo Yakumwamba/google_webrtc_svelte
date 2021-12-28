@@ -78,6 +78,23 @@
         <p>Got stream with constraints: <span><strong>{JSON.stringify(constraints)}</strong></span></p>
         <p>Using audio device : {audioTrackLabel ? audioTrackLabel : "No device connected yet" }</p>
       </div>
+      <div id="meters">
+        <div id="instant">
+            <div class="label">Instant:</div>
+            <meter high="0.25" max="1" value="0"></meter>
+            <div class="value"></div>
+        </div>
+        <div id="slow">
+            <div class="label">Slow:</div>
+            <meter high="0.25" max="1" value="0"></meter>
+            <div class="value"></div>
+        </div>
+        <div id="clip">
+            <div class="label">Clip:</div>
+            <meter max="1" value="0"></meter>
+            <div class="value"></div>
+        </div>
+    </div>
     </div>
   </div>
 

@@ -2,20 +2,14 @@
   "name": "google-webrtc",
   "version": "0.0.1",
   "scripts": {
-  
-  "dev:only": "svelte-kit dev",
-  
-  "build:only": "svelte-kit build",
-  
-  "preview": "svelte-kit preview",
-  
-  "tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
-  
-  "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/tailwind-output.css",
-  
-  "dev": "concurrently \"yarn run dev:only\" \"yarn run tailwind:watch\"",
-  "build": "yarn run tailwind:build && yarn run build:only"
-},
+    "dev:only": "svelte-kit dev",
+    "build:only": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
+    "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/tailwind-output.css",
+    "dev": "concurrently \"yarn run dev:only\" \"yarn run tailwind:watch\"",
+    "build": "yarn run tailwind:build && yarn run build:only"
+  },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
@@ -34,6 +28,7 @@
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
+    "cross-env": "^7.0.3",
     "cssnano": "^5.0.14",
     "daisyui": "^1.19.0"
   }

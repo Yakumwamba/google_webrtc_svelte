@@ -80,10 +80,20 @@
     }
 </script>
 
-<div>
-    <h2>This is a webrtc demo</h2>
+<div class="bg-blue-300  p-6 rounded h-screen flex items-center justify-center flex-col gap-2">
+   
 
-    <video id="video" playsinline autoplay bind:this={video} />
+    <div class="">
+        <video id="video" playsinline autoplay bind:this={video} />
+    </div>
+    <div class="p-4 card w-96 bg-white">
+         
+        <p class="text-xl font-semibold">Welcome to WebRTC With Svelte Tutorial</p> 
+        <div class="justify-end card-actions">
+          <button class="btn btn-accent">Start Tutorial</button>
+        </div>
+      </div>
+  
     <div id="errorMsg" />
     <canvas bind:this={canvas} width={32} height={32} />
 </div>
