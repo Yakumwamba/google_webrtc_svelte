@@ -15,6 +15,8 @@
     "@sveltejs/kit": "next",
     "@types/cookie": "^0.4.1",
     "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "postcss-load-config": "^3.1.0",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
