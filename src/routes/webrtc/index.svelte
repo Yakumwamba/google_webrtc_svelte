@@ -1,10 +1,10 @@
-<script  >
-import { browser } from "$app/env";
+<script>
+    import { browser } from "$app/env";
 
     import { onMount } from "svelte";
 
     let video;
-let canvas;
+    let canvas;
     onMount(async () => {
         video = document.getElementById("video");
         canvas = window.canvas = document.getElementById("canvas");
@@ -12,28 +12,26 @@ let canvas;
         //video.play();
         const constraints = (window.constraints = {
             audio: false,
-            video:true
+            video: true,
         });
-    
-        
-        if(window.isSecureContext) {
+
+        if (window.isSecureContext) {
             console.log("Secure");
         } else {
             console.log("Not Secure");
         }
         try {
-            if(browser) {
+            if (browser) {
                 const stream = await navigator.mediaDevices.getUserMedia(
                     constraints
                 );
                 console.log("this a stream = > ", stream);
                 handleSuccess(stream);
             }
-           
         } catch (error) {
             handleError(error);
         }
-       // init();
+        // init();
     });
 
     //==========================================================
@@ -76,23 +74,26 @@ let canvas;
                 constraints
             );
             handleSuccess(stream);
-          
         } catch (e) {
             handleError(e);
         }
     }
 </script>
 
-<div>
-    <h2>This is a webrtc demo</h2>
+<div class="bg-blue-300  p-6 rounded h-screen flex items-center justify-center flex-col gap-2">
+   
 
-    <video id="video" playsinline autoplay bind:this={video} />
-    <div id="errorMsg"></div>
-    <canvas 
-    bind:this={canvas}
-    width={32}
-    height={32}
-    >
-
-    </canvas>
+    <div class="">
+        <video id="video" playsinline autoplay bind:this={video} />
+    </div>
+    <div class="p-4 card w-96 bg-white">
+         
+        <p class="text-xl font-semibold">Welcome to WebRTC With Svelte Tutorial</p> 
+        <div class="justify-end card-actions">
+          <button class="btn btn-accent">Start Tutorial</button>
+        </div>
+      </div>
+  
+    <div id="errorMsg" />
+    <canvas bind:this={canvas} width={32} height={32} />
 </div>

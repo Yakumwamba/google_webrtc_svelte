@@ -3,8 +3,8 @@
 </script>
 
 <script lang="ts">
-	import Counter from "$lib/Counter.svelte";
 
+	let src = './assets/logo.png'
 	import { goto } from "$app/navigation";
 
 
@@ -15,23 +15,25 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>WebRTC & Svelte</title>
 </svelte:head>
 
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<button class="btn start_button" on:click={start_webrtc} > Start </button>
-</section>
+<div class="hero min-h-screen bg-blue-200">
+	<div class="text-center hero-content">
+	  <div class="max-w-md">
+		  <img src="logo.png" alt="svelte_webrtc"  />
+		<h1 class="mb-5 text-5xl font-bold">
+			 Hello, Devs
+			</h1> 
+		<p class="text-xl mb-5">
+			  Learn more about webrtc and how it can be used to build a realtime application using svelte and Svelte Kit.
+			</p> 
+			<a href="/webrtc" class="bg-gray-200 hover:bg-gray-100 border-b-4 border-yellow-400 hover:border-gray-200 text-black text-center py-2 px-4 rounded">
+				Get Started
+			  </a>
+	  </div>
+	</div>
+  </div>
 
 <style>
 	section {
