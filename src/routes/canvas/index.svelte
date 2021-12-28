@@ -1,8 +1,6 @@
 <script>
-
-// I created this project to learn how to use the Svelte library and to learn how to use the Svelte CLI.
-// This is a guide to how to use the Svelte CLI and webrtc in Svelte.
-
+    // I created this project to learn how to use the Svelte library and to learn how to use the Svelte CLI.
+    // This is a guide to how to use the Svelte CLI and webrtc in Svelte.
 
     import { onMount } from "svelte";
 
@@ -37,7 +35,7 @@
     };
     const capture_image = () => {
         console.log("capturing images ....", video);
-        canvas.className = video.className
+        canvas.className = video.className;
         canvas
             .getContext("2d")
             .drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -81,10 +79,12 @@
 </script>
 
 <div class="flex flex-col">
-    <video bind:this={video} playsinline width="480" height="360" autoplay />
+    <video bind:this={video} playsinline width="480" height="360" autoplay>
+        <track kind="captions" />
+    </video>
 
     <canvas bind:this={canvas} />
-    <label> Brightness </label>
+    <p>Brightness</p>
     <input
         on:change={changingBrightness}
         type="range"
