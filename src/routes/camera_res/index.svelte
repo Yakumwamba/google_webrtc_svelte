@@ -208,8 +208,11 @@
 <div id="videoblock">
     <p bind:this={dimemsions} />
 
-    <video bind:this={video} playsinline autoplay />
+    <video bind:this={video} playsinline autoplay >
+        <track kind="captions">
+    </video>
     <div id="width">
+        <!-- svelte-ignore a11y-label-has-associated-control -->
         <label>Width <span bind:this={widthOutput} />px:</label>
         <input
             bind:this={widthInput}

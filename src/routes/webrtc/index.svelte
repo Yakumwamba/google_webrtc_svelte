@@ -7,9 +7,11 @@
     let canvas;
     onMount(async () => {
         video = document.getElementById("video");
+        // @ts-ignore
         canvas = window.canvas = document.getElementById("canvas");
         console.log(canvas);
         //video.play();
+        // @ts-ignore
         const constraints = (window.constraints = {
             audio: false,
             video: true,
@@ -42,11 +44,13 @@
         const videoTrack = stream.getVideoTracks();
         console.log("videoTrack", videoTrack);
         console.log(`using video device : ${videoTrack[0].label}`);
+        // @ts-ignore
         window.stream = stream;
         video.srcObject = stream;
     }
     function handleError(error) {
         if (error.name === "OverconstrainedError") {
+            // @ts-ignore
             const v = constraints.video;
             errorMsg(
                 `The resolution ${v.width.exact}x${v.height.exact} px is not supported by your device.`
@@ -71,6 +75,7 @@
     async function init(e) {
         try {
             const stream = await navigator.mediaDevices.getUserMedia(
+                // @ts-ignore
                 constraints
             );
             handleSuccess(stream);
@@ -84,7 +89,9 @@
    
 
     <div class="">
-        <video id="video" playsinline autoplay bind:this={video} />
+        <video id="video" playsinline autoplay bind:this={video} >
+        <track kind="captions">
+        </video>
     </div>
     <div class="p-4 card w-96 bg-white">
          
