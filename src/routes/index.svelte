@@ -5,8 +5,21 @@
 <script lang="ts">
 
 	let src = './assets/logo.png'
+	let background
+	
 	import { goto } from "$app/navigation";
+import { onMount } from "svelte";
 
+	import BIRDS from 'vanta/dist/vanta.birds.min';
+	let backgroundVanta;
+
+
+	onMount( () => {
+		this.backgroundVanta = BIRDS({
+      el: document.getElementById('background'),
+    })
+	
+	})
 
 
 	const start_webrtc = () => {
@@ -16,10 +29,11 @@
 
 <svelte:head>
 	<title>WebRTC & Svelte</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 </svelte:head>
 
-<div class="hero min-h-screen bg-blue-200">
-	<div class="text-center hero-content">
+<div   class="hero min-h-screen bg-blue-200 " id="background">
+	<div   class="text-center hero-content absolute  flex justify-center  z-10">
 	  <div class="max-w-md">
 		  <img src="logo.png" alt="svelte_webrtc"  />
 		<h1 class="mb-5 text-5xl font-bold">
